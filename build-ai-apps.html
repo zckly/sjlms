@@ -1,273 +1,496 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Build AI Apps | Anthropic</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <nav class="global-nav">
-        <div class="logotype">
-            <svg width="143" height="16" viewBox="0 0 143 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M34.8729 3.24862H40.0663V15.7348H43.3812V3.24862H48.5746V0.265193H34.8729V3.24862Z" fill="#141413"/>
-                <path d="M29.0166 11.0939L22.0552 0.265193H18.2983V15.7348H21.5028V4.90608L28.4641 15.7348H32.221V0.265193H29.0166V11.0939Z" fill="#141413"/>
-                <path d="M61.8342 6.43094H54.5414V0.265193H51.2265V15.7348H54.5414V9.41437H61.8342V15.7348H65.1492V0.265193H61.8342V6.43094Z" fill="#141413"/>
-                <path d="M6.16574 0.265193L0 15.7348H3.44751L4.70851 12.4862H11.1591L12.4199 15.7348H15.8674L9.70165 0.265193H6.16574ZM5.82364 9.61326L7.9337 4.1768L10.0438 9.61326H5.82364Z" fill="#141413"/>
-                <path d="M92.6188 0C88.1547 0 84.9945 3.31492 84.9945 8.0221C84.9945 12.6851 88.1547 16 92.6188 16C97.0607 16 100.199 12.6851 100.199 8.0221C100.199 3.31492 97.0607 0 92.6188 0ZM92.6188 12.9061C90.011 12.9061 88.4199 11.0497 88.4199 8.0221C88.4199 4.95028 90.011 3.09392 92.6188 3.09392C95.2044 3.09392 96.7735 4.95028 96.7735 8.0221C96.7735 11.0497 95.2044 12.9061 92.6188 12.9061Z" fill="#141413"/>
-                <path d="M138.961 10.5414C138.387 12.0442 137.238 12.9061 135.668 12.9061C133.061 12.9061 131.47 11.0497 131.47 8.0221C131.47 4.95028 133.061 3.09392 135.668 3.09392C137.238 3.09392 138.387 3.9558 138.961 5.45856H142.475C141.613 2.14365 139.028 0 135.668 0C131.204 0 128.044 3.31492 128.044 8.0221C128.044 12.6851 131.204 16 135.668 16C139.05 16 141.635 13.8343 142.497 10.5414H138.961Z" fill="#141413"/>
-                <path d="M117.834 0.265193L124 15.7348H127.381L121.215 0.265193H117.834Z" fill="#141413"/>
-                <path d="M110.851 0.265193H103.293V15.7348H106.608V10.1215H110.851C114.365 10.1215 116.508 8.26519 116.508 5.19337C116.508 2.12155 114.365 0.265193 110.851 0.265193ZM110.696 7.13812H106.608V3.24862H110.696C112.331 3.24862 113.193 3.9116 113.193 5.19337C113.193 6.47514 112.331 7.13812 110.696 7.13812Z" fill="#141413"/>
-                <path d="M82.453 4.97238C82.453 2.05525 80.3094 0.265193 76.7956 0.265193H69.2375V15.7348H72.5525V9.67956H76.2429L79.558 15.7348H83.2265L79.5558 9.21834C81.3982 8.51006 82.453 7.01856 82.453 4.97238ZM72.5525 3.24862H76.6409C78.2762 3.24862 79.1381 3.8453 79.1381 4.97238C79.1381 6.09945 78.2762 6.69613 76.6409 6.69613H72.5525V3.24862Z" fill="#141413"/>
-            </svg>
+      <div class="logotype">
+        <svg
+          width="143"
+          height="16"
+          viewBox="0 0 143 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M34.8729 3.24862H40.0663V15.7348H43.3812V3.24862H48.5746V0.265193H34.8729V3.24862Z"
+            fill="#141413"
+          />
+          <path
+            d="M29.0166 11.0939L22.0552 0.265193H18.2983V15.7348H21.5028V4.90608L28.4641 15.7348H32.221V0.265193H29.0166V11.0939Z"
+            fill="#141413"
+          />
+          <path
+            d="M61.8342 6.43094H54.5414V0.265193H51.2265V15.7348H54.5414V9.41437H61.8342V15.7348H65.1492V0.265193H61.8342V6.43094Z"
+            fill="#141413"
+          />
+          <path
+            d="M6.16574 0.265193L0 15.7348H3.44751L4.70851 12.4862H11.1591L12.4199 15.7348H15.8674L9.70165 0.265193H6.16574ZM5.82364 9.61326L7.9337 4.1768L10.0438 9.61326H5.82364Z"
+            fill="#141413"
+          />
+          <path
+            d="M92.6188 0C88.1547 0 84.9945 3.31492 84.9945 8.0221C84.9945 12.6851 88.1547 16 92.6188 16C97.0607 16 100.199 12.6851 100.199 8.0221C100.199 3.31492 97.0607 0 92.6188 0ZM92.6188 12.9061C90.011 12.9061 88.4199 11.0497 88.4199 8.0221C88.4199 4.95028 90.011 3.09392 92.6188 3.09392C95.2044 3.09392 96.7735 4.95028 96.7735 8.0221C96.7735 11.0497 95.2044 12.9061 92.6188 12.9061Z"
+            fill="#141413"
+          />
+          <path
+            d="M138.961 10.5414C138.387 12.0442 137.238 12.9061 135.668 12.9061C133.061 12.9061 131.47 11.0497 131.47 8.0221C131.47 4.95028 133.061 3.09392 135.668 3.09392C137.238 3.09392 138.387 3.9558 138.961 5.45856H142.475C141.613 2.14365 139.028 0 135.668 0C131.204 0 128.044 3.31492 128.044 8.0221C128.044 12.6851 131.204 16 135.668 16C139.05 16 141.635 13.8343 142.497 10.5414H138.961Z"
+            fill="#141413"
+          />
+          <path
+            d="M117.834 0.265193L124 15.7348H127.381L121.215 0.265193H117.834Z"
+            fill="#141413"
+          />
+          <path
+            d="M110.851 0.265193H103.293V15.7348H106.608V10.1215H110.851C114.365 10.1215 116.508 8.26519 116.508 5.19337C116.508 2.12155 114.365 0.265193 110.851 0.265193ZM110.696 7.13812H106.608V3.24862H110.696C112.331 3.24862 113.193 3.9116 113.193 5.19337C113.193 6.47514 112.331 7.13812 110.696 7.13812Z"
+            fill="#141413"
+          />
+          <path
+            d="M82.453 4.97238C82.453 2.05525 80.3094 0.265193 76.7956 0.265193H69.2375V15.7348H72.5525V9.67956H76.2429L79.558 15.7348H83.2265L79.5558 9.21834C81.3982 8.51006 82.453 7.01856 82.453 4.97238ZM72.5525 3.24862H76.6409C78.2762 3.24862 79.1381 3.8453 79.1381 4.97238C79.1381 6.09945 78.2762 6.69613 76.6409 6.69613H72.5525V3.24862Z"
+            fill="#141413"
+          />
+        </svg>
+      </div>
+      <div class="links">
+        <div class="tabs">
+          <a href="#" class="nav-link">Research</a>
+          <a href="#" class="nav-link">Company</a>
+          <a href="#" class="nav-link">Careers</a>
+          <a href="#" class="nav-link">News</a>
         </div>
-        <div class="links">
-            <div class="tabs">
-                <a href="#" class="nav-link">Research</a>
-                <a href="#" class="nav-link">Company</a>
-                <a href="#" class="nav-link">Careers</a>
-                <a href="#" class="nav-link">News</a>
-            </div>
-            <div class="cta-button">
-                <span class="button-label">Talk to Claude</span>
-            </div>
+        <div class="cta-button">
+          <span class="button-label">Talk to Claude</span>
         </div>
+      </div>
     </nav>
-    
+
     <main class="build-ai-apps-container">
-        <div class="build-ai-apps-content">
-            <!-- Hero Section -->
-            <div class="hero-section">
-                <div class="hero-cta">
-                    <div class="headline-container">
-                        <h1 class="build-ai-apps-heading">Build AI apps</h1>
-                        <p class="build-ai-apps-subtitle">Start developing AI-powered applications with our comprehensive API guides and best practices</p>
+      <div class="build-ai-apps-content">
+        <!-- Hero Section -->
+        <div class="hero-section">
+          <div class="hero-cta">
+            <div class="headline-container">
+              <h1 class="build-ai-apps-heading">Build AI apps</h1>
+              <p class="build-ai-apps-subtitle">
+                Start developing AI-powered applications with our comprehensive
+                API guides and best practices
+              </p>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/build-ai-apps.svg"
+              alt="Build AI Apps Illustration"
+            />
+          </div>
+        </div>
+
+        <!-- Topics Section -->
+        <div class="topics-section">
+          <div class="section-intro">
+            <h2 class="section-headline">Topics</h2>
+            <a href="#" class="see-all">See All</a>
+          </div>
+          
+          
+          <div class="topics-list">
+            <!-- Topic 1 -->
+            <div class="topic-item">
+              <div class="topic-header">
+                <div class="topic-icon">
+                  <img src="images/computer-use.svg" alt="Computer Use" />
+                </div>
+                <div class="topic-content">
+                  <h3 class="topic-title">Building AI Agents</h3>
+                  <p class="topic-description">
+                    Learn how to build effective AI agents with Claude
+                  </p>
+                </div>
+                <div class="topic-arrow">
+                  <img
+                    src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/caret-down.svg"
+                    class="caret-down"
+                    alt="Expand"
+                  />
+                  <img
+                    src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/caret-up.svg"
+                    class="caret-up"
+                    alt="Collapse"
+                  />
+                </div>
+              </div>
+              <div class="topic-content-expanded">
+                <div class="topic-section">
+                  <div class="section-label">
+                    <span>Getting Started</span>
+                  </div>
+                  <div class="section-links">
+                    <div class="link-row">
+                      <a href="#"
+                        >Learn how to build effective AI agents with Claude</a
+                      >
+                      <img
+                        src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg"
+                        class="right-arrow"
+                        alt="Arrow"
+                      />
                     </div>
+                    <div class="link-row">
+                      <a href="#">Agentic Cookbooks</a>
+                      <img
+                        src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg"
+                        class="right-arrow"
+                        alt="Arrow"
+                      />
+                    </div>
+                    <div class="link-row">
+                      <a href="#"
+                        >MCP: An open protocol that standardizes how
+                        applications provide context to LLMs</a
+                      >
+                      <img
+                        src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg"
+                        class="right-arrow"
+                        alt="Arrow"
+                      />
+                    </div>
+                  </div>
                 </div>
-                <div class="hero-image">
-                    <img src="images/build-ai-apps.svg" alt="Build AI Apps Illustration">
+
+                <div class="topic-section">
+                  <div class="section-label">
+                    <span>Development</span>
+                  </div>
+                  <div class="section-links">
+                    <div class="link-row">
+                      <a href="#"
+                        >Enhance your agents with structured, predictable
+                        outputs in JSON mode</a
+                      >
+                      <img
+                        src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg"
+                        class="right-arrow"
+                        alt="Arrow"
+                      />
+                    </div>
+                    <div class="link-row">
+                      <a href="#"
+                        >Building AI agents that reason before acting</a
+                      >
+                      <img
+                        src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg"
+                        class="right-arrow"
+                        alt="Arrow"
+                      />
+                    </div>
+                    <div class="link-row">
+                      <a href="#"
+                        >Creating agents that can effectively use tools</a
+                      >
+                      <img
+                        src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg"
+                        class="right-arrow"
+                        alt="Arrow"
+                      />
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
 
-            <!-- Topics Section -->
-            <div class="topics-section">
-                <div class="section-intro">
-                    <h2 class="section-headline">Topics</h2>
-                    <a href="#" class="see-all">See All</a>
+            <!-- Topic 2 -->
+            <div class="topic-item">
+              <div class="topic-header">
+                <div class="topic-icon">
+                  <img src="images/model-context-protocol.svg" alt="Model Context Protocol" />
                 </div>
-                <div class="topics-list">
-                    <!-- Topic 1 -->
-                    <div class="topic-item">
-                        <div class="topic-header">
-                            <div class="topic-icon">
-                                <div class="icon-placeholder connect-cursor"></div>
-                            </div>
-                            <div class="topic-content">
-                                <h3 class="topic-title">Building AI Agents</h3>
-                                <p class="topic-description">Learn how to build effective AI agents with Claude</p>
-                            </div>
-                            <div class="topic-arrow">
-                                <img src="images/caret-down.svg" class="caret-down" alt="Expand">
-                                <img src="images/caret-up.svg" class="caret-up" alt="Collapse">
-                            </div>
-                        </div>
-                        <div class="topic-content-expanded">
-                            <div class="topic-section">
-                                <div class="section-label">
-                                    <span>Getting Started</span>
-                                </div>
-                                <div class="section-links">
-                                    <div class="link-row">
-                                        <a href="#">Learn how to build effective AI agents with Claude</a>
-                                        <img src="images/right-arrow.svg" class="right-arrow" alt="Arrow">
-                                    </div>
-                                    <div class="link-row">
-                                        <a href="#">Agentic Cookbooks</a>
-                                        <img src="images/right-arrow.svg" class="right-arrow" alt="Arrow">
-                                    </div>
-                                    <div class="link-row">
-                                        <a href="#">MCP: An open protocol that standardizes how applications provide context to LLMs</a>
-                                        <img src="images/right-arrow.svg" class="right-arrow" alt="Arrow">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="topic-section">
-                                <div class="section-label">
-                                    <span>Development</span>
-                                </div>
-                                <div class="section-links">
-                                    <div class="link-row">
-                                        <a href="#">Enhance your agents with structured, predictable outputs in JSON mode</a>
-                                        <img src="images/right-arrow.svg" class="right-arrow" alt="Arrow">
-                                    </div>
-                                    <div class="link-row">
-                                        <a href="#">Building AI agents that reason before acting</a>
-                                        <img src="images/right-arrow.svg" class="right-arrow" alt="Arrow">
-                                    </div>
-                                    <div class="link-row">
-                                        <a href="#">Creating agents that can effectively use tools</a>
-                                        <img src="images/right-arrow.svg" class="right-arrow" alt="Arrow">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Topic 2 -->
-                    <div class="topic-item">
-                        <div class="topic-header">
-                            <div class="topic-icon">
-                                <div class="icon-placeholder context-window"></div>
-                            </div>
-                            <div class="topic-content">
-                                <h3 class="topic-title">Understanding Context Windows</h3>
-                                <p class="topic-description">Maximize Claude's performance with optimal context management</p>
-                            </div>
-                            <div class="topic-arrow">
-                                <img src="images/caret-down.svg" class="caret-down" alt="Expand">
-                                <img src="images/caret-up.svg" class="caret-up" alt="Collapse">
-                            </div>
-                        </div>
-                        <div class="topic-content-expanded">
-                            <div class="topic-section">
-                                <div class="section-label">
-                                    <span>Fundamentals</span>
-                                </div>
-                                <div class="section-links">
-                                    <div class="link-row">
-                                        <a href="#">Understanding context windows and token limits</a>
-                                        <img src="images/right-arrow.svg" class="right-arrow" alt="Arrow">
-                                    </div>
-                                    <div class="link-row">
-                                        <a href="#">How context affects Claude's responses</a>
-                                        <img src="images/right-arrow.svg" class="right-arrow" alt="Arrow">
-                                    </div>
-                                    <div class="link-row">
-                                        <a href="#">Maximizing Claude's 200K token context window</a>
-                                        <img src="images/right-arrow.svg" class="right-arrow" alt="Arrow">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="topic-section">
-                                <div class="section-label">
-                                    <span>Optimization</span>
-                                </div>
-                                <div class="section-links">
-                                    <div class="link-row">
-                                        <a href="#">Strategies for organizing long documents</a>
-                                        <img src="images/right-arrow.svg" class="right-arrow" alt="Arrow">
-                                    </div>
-                                    <div class="link-row">
-                                        <a href="#">Chunking techniques for effective context management</a>
-                                        <img src="images/right-arrow.svg" class="right-arrow" alt="Arrow">
-                                    </div>
-                                    <div class="link-row">
-                                        <a href="#">Performance considerations when using large contexts</a>
-                                        <img src="images/right-arrow.svg" class="right-arrow" alt="Arrow">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Topic 3 -->
-                    <div class="topic-item">
-                        <div class="topic-header">
-                            <div class="topic-icon">
-                                <div class="icon-placeholder document-search"></div>
-                            </div>
-                            <div class="topic-content">
-                                <h3 class="topic-title">Retrieval Augmented Generation</h3>
-                                <p class="topic-description">Build effective RAG systems to enhance AI responses with external data</p>
-                            </div>
-                            <div class="topic-arrow">
-                                <img src="images/caret-down.svg" class="caret-down" alt="Expand">
-                                <img src="images/caret-up.svg" class="caret-up" alt="Collapse">
-                            </div>
-                        </div>
-                        <div class="topic-content-expanded">
-                            <div class="topic-section">
-                                <div class="section-label">
-                                    <span>Concepts</span>
-                                </div>
-                                <div class="section-links">
-                                    <div class="link-row">
-                                        <a href="#">Introduction to Retrieval Augmented Generation</a>
-                                        <img src="images/right-arrow.svg" class="right-arrow" alt="Arrow">
-                                    </div>
-                                    <div class="link-row">
-                                        <a href="#">Vector databases and embeddings for effective retrieval</a>
-                                        <img src="images/right-arrow.svg" class="right-arrow" alt="Arrow">
-                                    </div>
-                                    <div class="link-row">
-                                        <a href="#">Understanding chunking strategies for documents</a>
-                                        <img src="images/right-arrow.svg" class="right-arrow" alt="Arrow">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="topic-section">
-                                <div class="section-label">
-                                    <span>Implementation</span>
-                                </div>
-                                <div class="section-links">
-                                    <div class="link-row">
-                                        <a href="#">Building scalable RAG pipelines</a>
-                                        <img src="images/right-arrow.svg" class="right-arrow" alt="Arrow">
-                                    </div>
-                                    <div class="link-row">
-                                        <a href="#">Query optimization and context fusion techniques</a>
-                                        <img src="images/right-arrow.svg" class="right-arrow" alt="Arrow">
-                                    </div>
-                                    <div class="link-row">
-                                        <a href="#">Evaluating and improving RAG system performance</a>
-                                        <img src="images/right-arrow.svg" class="right-arrow" alt="Arrow">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="topic-content">
+                  <h3 class="topic-title">Understanding Context Windows</h3>
+                  <p class="topic-description">
+                    Maximize Claude's performance with optimal context
+                    management
+                  </p>
                 </div>
+                <div class="topic-arrow">
+                  <img
+                    src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/caret-down.svg"
+                    class="caret-down"
+                    alt="Expand"
+                  />
+                  <img
+                    src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/caret-up.svg"
+                    class="caret-up"
+                    alt="Collapse"
+                  />
+                </div>
+              </div>
+              <div class="topic-content-expanded">
+                <div class="topic-section">
+                  <div class="section-label">
+                    <span>Fundamentals</span>
+                  </div>
+                  <div class="section-links">
+                    <div class="link-row">
+                      <a href="#"
+                        >Understanding context windows and token limits</a
+                      >
+                      <img
+                        src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg"
+                        class="right-arrow"
+                        alt="Arrow"
+                      />
+                    </div>
+                    <div class="link-row">
+                      <a href="#">How context affects Claude's responses</a>
+                      <img
+                        src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg"
+                        class="right-arrow"
+                        alt="Arrow"
+                      />
+                    </div>
+                    <div class="link-row">
+                      <a href="#"
+                        >Maximizing Claude's 200K token context window</a
+                      >
+                      <img
+                        src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg"
+                        class="right-arrow"
+                        alt="Arrow"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="topic-section">
+                  <div class="section-label">
+                    <span>Optimization</span>
+                  </div>
+                  <div class="section-links">
+                    <div class="link-row">
+                      <a href="#">Strategies for organizing long documents</a>
+                      <img
+                        src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg"
+                        class="right-arrow"
+                        alt="Arrow"
+                      />
+                    </div>
+                    <div class="link-row">
+                      <a href="#"
+                        >Chunking techniques for effective context management</a
+                      >
+                      <img
+                        src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg"
+                        class="right-arrow"
+                        alt="Arrow"
+                      />
+                    </div>
+                    <div class="link-row">
+                      <a href="#"
+                        >Performance considerations when using large contexts</a
+                      >
+                      <img
+                        src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg"
+                        class="right-arrow"
+                        alt="Arrow"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-  
+
+            <!-- Topic 3 -->
+            <div class="topic-item">
+              <div class="topic-header">
+                <div class="topic-icon">
+                  <img src="images/retrieval-augmented-generation.svg" alt="Retrieval Augmented Generation" />
+                </div>
+                <div class="topic-content">
+                  <h3 class="topic-title">Retrieval Augmented Generation</h3>
+                  <p class="topic-description">
+                    Build effective RAG systems to enhance AI responses with
+                    external data
+                  </p>
+                </div>
+                <div class="topic-arrow">
+                  <img
+                    src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/caret-down.svg"
+                    class="caret-down"
+                    alt="Expand"
+                  />
+                  <img
+                    src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/caret-up.svg"
+                    class="caret-up"
+                    alt="Collapse"
+                  />
+                </div>
+              </div>
+              <div class="topic-content-expanded">
+                <div class="topic-section">
+                  <div class="section-label">
+                    <span>Concepts</span>
+                  </div>
+                  <div class="section-links">
+                    <div class="link-row">
+                      <a href="#"
+                        >Introduction to Retrieval Augmented Generation</a
+                      >
+                      <img
+                        src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg"
+                        class="right-arrow"
+                        alt="Arrow"
+                      />
+                    </div>
+                    <div class="link-row">
+                      <a href="#"
+                        >Vector databases and embeddings for effective
+                        retrieval</a
+                      >
+                      <img
+                        src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg"
+                        class="right-arrow"
+                        alt="Arrow"
+                      />
+                    </div>
+                    <div class="link-row">
+                      <a href="#"
+                        >Understanding chunking strategies for documents</a
+                      >
+                      <img
+                        src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg"
+                        class="right-arrow"
+                        alt="Arrow"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="topic-section">
+                  <div class="section-label">
+                    <span>Implementation</span>
+                  </div>
+                  <div class="section-links">
+                    <div class="link-row">
+                      <a href="#">Building scalable RAG pipelines</a>
+                      <img
+                        src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg"
+                        class="right-arrow"
+                        alt="Arrow"
+                      />
+                    </div>
+                    <div class="link-row">
+                      <a href="#"
+                        >Query optimization and context fusion techniques</a
+                      >
+                      <img
+                        src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg"
+                        class="right-arrow"
+                        alt="Arrow"
+                      />
+                    </div>
+                    <div class="link-row">
+                      <a href="#"
+                        >Evaluating and improving RAG system performance</a
+                      >
+                      <img
+                        src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg"
+                        class="right-arrow"
+                        alt="Arrow"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        
+        <!-- Take a course section -->
+        <div class="learning-path-section">
+          <div class="section-intro">
+            <h2 class="section-headline">Take a course</h2>
+            <a href="#" class="see-all">See All</a>
+          </div>
+          <div class="learning-path-banner">
+            <div class="banner-content">
+              <div class="banner-text">
+                <h3 class="banner-title">AI Engineer path</h3>
+                <p class="banner-description">A comprehensive learning path for building advanced applications with Generative AI APIs</p>
+              </div>
+              <div class="banner-metadata">
+                <div class="metadata">
+                  <span class="date">March 2025</span>
+                  <span class="divider">|</span>
+                  <span class="read-time">17 hours</span>
+                </div>
+                <a href="#" class="outline-button">Start learning</a>
+              </div>
+            </div>
+            <div class="banner-cards">
+              <div class="banner-card">
+                <div class="card-content">
+                  <div class="card-badge">FUNDAMENTALS</div>
+                  <div class="card-title">Prompt Engineering</div>
+                  <div class="card-arrow">
+                    <img src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg" alt="Arrow" />
+                  </div>
+                </div>
+              </div>
+              <div class="banner-card">
+                <div class="card-content">
+                  <div class="card-badge">INTEGRATION</div>
+                  <div class="card-title">Claude on Bedrock</div>
+                  <div class="card-arrow">
+                    <img src="https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/right-arrow.svg" alt="Arrow" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="images/Anthropic Logomark Ivory.svg" alt="Anthropic Logo" class="anthropic-logomark">
-            </div>
-            
-            <div class="footer-links">
-                <div class="footer-column">
-                    <a href="#" class="link-muted">Claude</a>
-                    <a href="#" class="link-muted">Research</a>
-                    <a href="#" class="link-muted">News</a>
-                    <a href="#" class="link-muted">Company</a>
-                    <a href="#" class="link-muted">Careers</a>
-                </div>
-                
-                <div class="footer-column">
-                    <a href="#" class="link-muted">Email</a>
-                    <a href="#" class="link-muted">Twitter</a>
-                    <a href="#" class="link-muted">Linkedin</a>
-                </div>
-                
-                <div class="footer-column">
-                    <a href="#" class="link-muted">Terms of Use</a>
-                    <a href="#" class="link-muted">Privacy Policy</a>
-                </div>
-            </div>
-            
-            <div class="footer-copyright">
-                <p>&copy; 2025 Anthropic PBC</p>
-            </div>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img
+            src="images/Anthropic Logomark Ivory.svg"
+            alt="Anthropic Logo"
+            class="anthropic-logomark"
+          />
         </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <a href="#" class="link-muted">Claude</a>
+            <a href="#" class="link-muted">Research</a>
+            <a href="#" class="link-muted">News</a>
+            <a href="#" class="link-muted">Company</a>
+            <a href="#" class="link-muted">Careers</a>
+          </div>
+
+          <div class="footer-column">
+            <a href="#" class="link-muted">Email</a>
+            <a href="#" class="link-muted">Twitter</a>
+            <a href="#" class="link-muted">Linkedin</a>
+          </div>
+
+          <div class="footer-column">
+            <a href="#" class="link-muted">Terms of Use</a>
+            <a href="#" class="link-muted">Privacy Policy</a>
+          </div>
+        </div>
+
+        <div class="footer-copyright">
+          <p>&copy; 2025 Anthropic PBC</p>
+        </div>
+      </div>
     </footer>
 
     <script src="js/app.js"></script>
-</body>
+  </body>
 </html>

@@ -65,12 +65,12 @@
     font-style: normal;
 }
 
-body {
+#skilljar-content {
     font-family: 'TiemposText-Regular', serif;
     line-height: 1.6;
     color: #333;
     margin: 0 auto;
-    background: var(--Neutrals-ivory-light, #FAF9F5);
+    background: var(--Neutrals-ivory-light, #FAF9F5) !important;
 }
 
 /* Header styles */
@@ -351,7 +351,7 @@ h1, h2 {
     position: absolute;
     right: 24px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-80%);
     background: transparent;
     border: none;
     cursor: pointer;
@@ -764,6 +764,15 @@ footer {
     height: 115px;
     position: relative;
     flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topic-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 .icon-placeholder {
@@ -1107,7 +1116,6 @@ footer {
     align-items: center;
     padding: 0 32px;
     gap: 4px;
-    width: 176px;
     height: 48px;
     border: 1px solid #191919;
     border-radius: 16px;
@@ -1183,16 +1191,14 @@ footer {
     position: relative;
     margin-top: auto;
     align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.card-arrow::after {
-    content: '';
-    position: absolute;
-    left: 12.5%;
-    right: 12.5%;
-    top: 18.75%;
-    bottom: 18.75%;
-    background: #141413;
+.card-arrow img {
+    width: 24px;
+    height: 24px;
 }
 
 /* Responsive Styles */
