@@ -339,7 +339,7 @@ const additionalTopics = {
     title: "Artifacts",
     description:
       "Create, manage, and collaborate on files and other content in Claude.ai",
-    icon: "https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/artifacts.svg",
+    icon: "",
     sections: [
       {
         label: "Resources",
@@ -357,7 +357,7 @@ const additionalTopics = {
     title: "Projects",
     description:
       "Organize your work and collaborate on complex tasks with Claude.ai Projects",
-    icon: "https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/projects.svg",
+    icon: "",
     sections: [
       {
         label: "Resources",
@@ -375,7 +375,7 @@ const additionalTopics = {
     title: "Integrations",
     description:
       "Connect Claude.ai with your favorite tools to streamline your workflow",
-    icon: "https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/integrations.svg",
+    icon: "",
     sections: [
       {
         label: "Resources",
@@ -564,14 +564,15 @@ function createTopicElement(topic) {
   const topicHeader = document.createElement("div");
   topicHeader.className = "topic-header";
 
-  // Create topic icon if available
-  const topicIcon = document.createElement("div");
-  topicIcon.className = "topic-icon";
+  // Create topic icon only if icon is available and not empty
   if (topic.icon) {
+    const topicIcon = document.createElement("div");
+    topicIcon.className = "topic-icon";
     const iconImg = document.createElement("img");
     iconImg.src = topic.icon;
     iconImg.alt = topic.title;
     topicIcon.appendChild(iconImg);
+    topicHeader.appendChild(topicIcon);
   }
 
   // Create topic content
@@ -609,7 +610,6 @@ function createTopicElement(topic) {
   topicArrow.appendChild(caretUp);
 
   // Assemble topic header
-  topicHeader.appendChild(topicIcon);
   topicHeader.appendChild(topicContent);
   topicHeader.appendChild(topicArrow);
 
