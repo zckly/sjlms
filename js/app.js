@@ -138,26 +138,31 @@ const topicsData = {
     id: "agents",
     title: "Agents",
     description:
-      "Build autonomous AI agents that can understand, plan, and execute complex tasks",
+      "Build autonomous agents that understand, plan, and execute complex tasks",
     icon: "https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/agents.svg",
     sections: [
       {
-        label: "Resources",
+        label: "Documentation",
         links: [
           {
-            text: "Building Effective Agents",
+            text: "Learn about building effective agents",
             url: "https://www.anthropic.com/research/building-effective-agents",
           },
           {
-            text: "Agentic Cookbooks",
+            text: "Explore agent patterns with our cookbooks",
             url: "https://github.com/anthropics/anthropic-cookbook/tree/main/patterns/agents",
           },
+        ],
+      },
+      {
+        label: "Tools & Integration",
+        links: [
           {
-            text: "Model Context Protocol",
+            text: "Integrate with Model Context Protocol",
             url: "https://modelcontextprotocol.io/",
           },
           {
-            text: "JSON Mode",
+            text: "Implement JSON Mode for reliable outputs",
             url: "https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/increase-consistency",
           },
         ],
@@ -168,26 +173,31 @@ const topicsData = {
     id: "evaluations",
     title: "Evaluations",
     description:
-      "Test and improve Claude's performance for your specific use cases with structured evaluations",
+      "Test and improve Claude's performance with structured evaluations",
     icon: "https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/evaluations.svg",
     sections: [
       {
-        label: "Resources",
+        label: "Learning",
         links: [
           {
-            text: "Evaluation Course",
+            text: "Take our evaluation course",
             url: "https://github.com/anthropics/courses/blob/master/prompt_evaluations/README.md",
           },
           {
-            text: "Automated Evals Cookbook",
+            text: "Learn how to build automated evaluations",
             url: "https://github.com/anthropics/anthropic-cookbook/blob/main/misc/building_evals.ipynb",
           },
+        ],
+      },
+      {
+        label: "Documentation",
+        links: [
           {
-            text: "Evals Documentation",
+            text: "Read our evaluations documentation",
             url: "https://docs.anthropic.com/en/docs/build-with-claude/develop-tests",
           },
           {
-            text: "Eval Tool on Console",
+            text: "Use the Eval Tool on Claude Console",
             url: "https://docs.anthropic.com/en/docs/test-and-evaluate/eval-tool",
           },
         ],
@@ -197,31 +207,35 @@ const topicsData = {
   promptEngineering: {
     id: "prompt-engineering",
     title: "Prompt Engineering",
-    description:
-      "Create effective prompts that maximize Claude's performance and reliability",
+    description: "Create effective prompts that maximize Claude's performance",
     icon: "https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/prompt-engineering.svg",
     sections: [
+      {
+        label: "Courses",
+        links: [
+          {
+            text: "Complete our basic tutorial",
+            url: "https://github.com/anthropics/courses/blob/master/prompt_engineering_interactive_tutorial/README.md",
+          },
+          {
+            text: "Master real-world prompting techniques",
+            url: "https://github.com/anthropics/courses/blob/master/real_world_prompting/README.md",
+          },
+        ],
+      },
       {
         label: "Resources",
         links: [
           {
-            text: "Basic Tutorial",
-            url: "https://github.com/anthropics/courses/blob/master/prompt_engineering_interactive_tutorial/README.md",
-          },
-          {
-            text: "Real World Prompting",
-            url: "https://github.com/anthropics/courses/blob/master/real_world_prompting/README.md",
-          },
-          {
-            text: "Documentation",
+            text: "Explore our prompt engineering documentation",
             url: "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
           },
           {
-            text: "Prompt Generator",
+            text: "Try our interactive prompt generator",
             url: "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-generator",
           },
           {
-            text: "Prompt Engineering Roundtable",
+            text: "Watch our prompt engineering roundtable",
             url: "https://www.youtube.com/watch?v=T9aRN5JkmL8",
           },
         ],
@@ -232,30 +246,35 @@ const topicsData = {
     id: "tool-use",
     title: "Tool Use",
     description:
-      "Extend Claude's capabilities by connecting it to external tools and APIs",
+      "Extend Claude's capabilities by connecting to external tools and APIs",
     icon: "https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/tool-use.svg",
     sections: [
       {
-        label: "Resources",
+        label: "Getting Started",
         links: [
           {
-            text: "Blog Post",
+            text: "Read about tool use general availability",
             url: "https://www.anthropic.com/news/tool-use-ga",
           },
           {
-            text: "Documentation",
+            text: "Explore our tool use documentation",
             url: "https://docs.anthropic.com/en/docs/build-with-claude/tool-use",
           },
+        ],
+      },
+      {
+        label: "Learning",
+        links: [
           {
-            text: "Cookbooks",
+            text: "Explore our tool use cookbooks",
             url: "https://github.com/anthropics/anthropic-cookbook/tree/main/tool_use",
           },
           {
-            text: "Course",
+            text: "Take our tool use course",
             url: "https://github.com/anthropics/courses/blob/master/tool_use/README.md",
           },
           {
-            text: "Tool Use Demo Video",
+            text: "Watch our tool use demo video",
             url: "https://www.youtube.com/watch?v=6wkFb2_cUik",
           },
         ],
@@ -266,34 +285,39 @@ const topicsData = {
     id: "vision",
     title: "Vision",
     description:
-      "Harness Claude's ability to understand and analyze visual information in your applications",
+      "Harness Claude's ability to understand and analyze visual information",
     icon: "https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/vision.svg",
     sections: [
       {
-        label: "Resources",
+        label: "Getting Started",
         links: [
           {
-            text: "Blog Post",
+            text: "Read about Claude's vision capabilities",
             url: "https://www.anthropic.com/news/claude-3-5-sonnet",
           },
           {
-            text: "Documentation",
+            text: "Explore our vision documentation",
             url: "https://docs.anthropic.com/en/docs/build-with-claude/vision",
           },
           {
-            text: "Getting Started with Vision Cookbook",
+            text: "Get started with vision in our cookbook",
             url: "https://github.com/anthropics/anthropic-cookbook/blob/main/multimodal/getting_started_with_vision.ipynb",
           },
+        ],
+      },
+      {
+        label: "Advanced Uses",
+        links: [
           {
-            text: "Best Practices for Vision Cookbook",
+            text: "Learn best practices for vision",
             url: "https://github.com/anthropics/anthropic-cookbook/blob/main/multimodal/best_practices_for_vision.ipynb",
           },
           {
-            text: "Transcribing Text Cookbook",
+            text: "Extract text from images with Claude",
             url: "https://github.com/anthropics/anthropic-cookbook/blob/main/multimodal/how_to_transcribe_text.ipynb",
           },
           {
-            text: "Reading Charts Cookbook",
+            text: "Analyze charts and graphs with Claude",
             url: "https://github.com/anthropics/anthropic-cookbook/blob/main/multimodal/reading_charts_graphs_powerpoints.ipynb",
           },
         ],
@@ -304,26 +328,31 @@ const topicsData = {
     id: "prompt-caching",
     title: "Prompt Caching",
     description:
-      "Optimize application performance and reduce costs by reusing Claude's responses",
+      "Optimize performance and reduce costs by reusing Claude's responses",
     icon: "https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/prompt-caching.svg",
     sections: [
       {
-        label: "Resources",
+        label: "Documentation",
         links: [
           {
-            text: "Prompt Caching Blog Post",
+            text: "Read about prompt caching",
             url: "https://www.anthropic.com/news/prompt-caching",
           },
           {
-            text: "Documentation",
+            text: "Explore the prompt caching documentation",
             url: "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching",
           },
+        ],
+      },
+      {
+        label: "Implementation",
+        links: [
           {
-            text: "Cookbook",
+            text: "Implement prompt caching with our cookbook",
             url: "https://github.com/anthropics/anthropic-cookbook/blob/main/misc/prompt_caching.ipynb",
           },
           {
-            text: "Prompt Caching Explainer Video",
+            text: "Watch our prompt caching explainer video",
             url: "https://youtu.be/h18BezoizkI?list=PLf2m23nhTg1OQAT3n_OD0g3P3gnK6pxW-",
           },
         ],
@@ -403,7 +432,8 @@ const allTopics = { ...topicsData, ...additionalTopics };
 
 // Page-specific topic configurations
 const pageTopics = {
-  "build-ai-apps.html": [
+  "build-ai-apps.html": ["computerUse", "modelContextProtocol", "rag"],
+  "build-ai-apps-topics.html": [
     "computerUse",
     "modelContextProtocol",
     "rag",
@@ -430,8 +460,42 @@ function initApp() {
   // Render topics based on the current page
   renderTopics();
 
+  // Update "See all" links to work in both environments
+  updateSeeAllLinks();
+
   // Initialize accordions for topics section
   initTopicAccordions();
+}
+
+/**
+ * Updates the "See all" links to work in both local and production environments
+ */
+function updateSeeAllLinks() {
+  const seeAllLinks = document.querySelectorAll("a.see-all");
+
+  if (seeAllLinks.length === 0) return;
+
+  const isSkilljar = window.location.href.includes("skilljar.com");
+
+  seeAllLinks.forEach((link) => {
+    const href = link.getAttribute("href");
+
+    // Only modify links that point to our HTML pages
+    if (
+      href &&
+      (href.endsWith(".html") ||
+        href === "build-ai-apps.html" ||
+        href === "build-ai-apps-topics.html")
+    ) {
+      const pageName = href.replace(".html", "");
+
+      if (isSkilljar) {
+        // In Skilljar, use the /page/ format
+        link.setAttribute("href", `/page/${pageName}`);
+      }
+      // Local links stay as they are with .html extension
+    }
+  });
 }
 
 /**
@@ -445,6 +509,7 @@ function generateHeader() {
   // Create the logo container
   const logoDiv = document.createElement("div");
   logoDiv.className = "logotype";
+  logoDiv.style.zIndex = "103"; // Ensure logo stays on top of fullscreen menu
 
   // Create logo link container
   const logoLink = document.createElement("a");
@@ -458,6 +523,31 @@ function generateHeader() {
 
   logoLink.appendChild(logoImg);
   logoDiv.appendChild(logoLink);
+
+  // Create centered logomark for mobile
+  const mobileLogomarkDiv = document.createElement("div");
+  mobileLogomarkDiv.className = "centered-logo";
+
+  const mobileLogomarkLink = document.createElement("a");
+  mobileLogomarkLink.href = "https://anthropic.com";
+
+  const mobileLogomarkImg = document.createElement("img");
+  mobileLogomarkImg.src =
+    "https://raw.githubusercontent.com/zckly/sjlms/refs/heads/main/images/anthropic-logomark.svg";
+  mobileLogomarkImg.alt = "Anthropic Logomark";
+
+  mobileLogomarkLink.appendChild(mobileLogomarkImg);
+  mobileLogomarkDiv.appendChild(mobileLogomarkLink);
+
+  // Create the hamburger menu
+  const hamburgerMenu = document.createElement("div");
+  hamburgerMenu.className = "hamburger-menu";
+
+  // Create the three lines for the hamburger icon
+  for (let i = 0; i < 3; i++) {
+    const span = document.createElement("span");
+    hamburgerMenu.appendChild(span);
+  }
 
   // Create the links container
   const linksDiv = document.createElement("div");
@@ -502,10 +592,27 @@ function generateHeader() {
   ctaLink.appendChild(buttonLabel);
   ctaDiv.appendChild(ctaLink);
 
+  // Remove placeholder div for mobile layout
+
+  // Create a wrapper for tabs to help with centering
+  const tabsWrapperDiv = document.createElement("div");
+  tabsWrapperDiv.className = "tabs-wrapper";
+  tabsWrapperDiv.style.flex = "1";
+  tabsWrapperDiv.style.display = "flex";
+  tabsWrapperDiv.style.flexDirection = "column";
+  tabsWrapperDiv.style.justifyContent = "center";
+  tabsWrapperDiv.style.width = "100%";
+  tabsWrapperDiv.style.alignItems = "center";
+
+  // Add tabs to the wrapper
+  tabsWrapperDiv.appendChild(tabsDiv);
+
   // Append all elements to build the navigation
-  linksDiv.appendChild(tabsDiv);
+  linksDiv.appendChild(tabsWrapperDiv);
   linksDiv.appendChild(ctaDiv);
   nav.appendChild(logoDiv);
+  nav.appendChild(mobileLogomarkDiv);
+  nav.appendChild(hamburgerMenu); // Right side
   nav.appendChild(linksDiv);
 
   // Find where to insert the header
@@ -521,14 +628,43 @@ function generateHeader() {
     // If skilljar-body doesn't exist, insert at the beginning of body
     body.insertBefore(nav, firstChild);
   }
+
+  // Create backdrop for mobile menu
+  const backdrop = document.createElement("div");
+  backdrop.className = "mobile-menu-backdrop";
+  document.body.appendChild(backdrop);
+
+  // No mobile-specific media query needed anymore since we removed the placeholder
+
+  // Add event listener for hamburger menu
+  hamburgerMenu.addEventListener("click", function () {
+    hamburgerMenu.classList.toggle("active");
+    linksDiv.classList.toggle("active");
+    backdrop.classList.toggle("active");
+
+    // Prevent body scrolling when menu is open
+    if (backdrop.classList.contains("active")) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  });
+
+  // Close menu when backdrop is clicked
+  backdrop.addEventListener("click", function () {
+    hamburgerMenu.classList.remove("active");
+    linksDiv.classList.remove("active");
+    backdrop.classList.remove("active");
+    document.body.style.overflow = "";
+  });
 }
 
 /**
  * Render topics based on the current page
  */
 function renderTopics() {
-  // Get current page
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  // Get current page identifier from URL
+  const currentPage = getCurrentPageIdentifier();
 
   // Find the topics list container
   const topicsListContainer = document.querySelector(".topics-list");
@@ -548,6 +684,44 @@ function renderTopics() {
     const topicElement = createTopicElement(topic);
     topicsListContainer.appendChild(topicElement);
   });
+}
+
+/**
+ * Determines the current page identifier for both local and production environments
+ * @returns {string} Page identifier used in the pageTopics mapping
+ */
+function getCurrentPageIdentifier() {
+  const pathname = window.location.pathname;
+  const url = window.location.href;
+
+  // Default to index.html
+  let pageId = "index.html";
+
+  // Check if we're in Skilljar production environment
+  if (url.includes("skilljar.com/page/")) {
+    // Extract the last part of the URL path for Skilljar
+    const matches = pathname.match(/\/page\/([^/?#]+)/);
+    if (matches && matches[1]) {
+      // Map Skilljar page names to our HTML file names
+      const pageMap = {
+        "build-ai-apps": "build-ai-apps.html",
+        "build-ai-apps-topics": "build-ai-apps-topics.html",
+        "claude-for-work": "claude-for-work.html",
+        "claude-for-you": "claude-for-you.html",
+      };
+
+      pageId = pageMap[matches[1]] || "index.html";
+    }
+  } else {
+    // Local development - use the file name directly
+    const filename = pathname.split("/").pop();
+    if (filename) {
+      pageId = filename;
+    }
+  }
+
+  console.log("Current page identified as:", pageId);
+  return pageId;
 }
 
 /**
